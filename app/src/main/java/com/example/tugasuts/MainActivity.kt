@@ -7,6 +7,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.EditText
 import android.widget.Button
+import android.widget.Toast
 
 
 class MainActivity : AppCompatActivity() {
@@ -32,12 +33,15 @@ class MainActivity : AppCompatActivity() {
             var passwordlagiText = passwordlagi.text.toString()
 
 
-            if(usernameText.isBlank() || passwordText.isBlank()){
+            if(usernameText.isBlank() || emailText.isBlank() || firstnameText.isBlank() || lastnameText.isBlank() || passwordText.isBlank() || passwordlagiText.isBlank()){
                 Toast.makeText(this,
-                    "Username & Password tidak boleh kosong",
+                    "Semua Filed Input Harus Diisi",
                     Toast.LENGTH_LONG
                 ).show()
             }else{
+                val fullName = "$firstnameText $lastnameText".trim()
+                val displayName = if (usernameText.isNotBlank()) usernameText else fullName
+
                 Toast.makeText(this,
                     "Login diproses..",
                     Toast.LENGTH_LONG
