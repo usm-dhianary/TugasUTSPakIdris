@@ -25,7 +25,12 @@ class MainActivity : AppCompatActivity() {
         var buttonSubmit = findViewById<Button>(R.id.btnSubmit)
         buttonSubmit.setOnClickListener {
             var usernameText = username.text.toString()
+            var emailText = email.text.toString()
+            var firstnameText = firstname.text.toString()
+            var lastnameText = lastname.text.toString()
             var passwordText = password.text.toString()
+            var passwordlagiText = passwordlagi.text.toString()
+
 
             if(usernameText.isBlank() || passwordText.isBlank()){
                 Toast.makeText(this,
