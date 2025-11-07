@@ -14,7 +14,23 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="24dp"
         android:text="Formulir Pendaftaran"
-        android:textSize="24sp" />
+        android:textColor="#E91E63"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Username" />
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="username"
+        android:inputType="text" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,7 +38,7 @@
         android:text="Email" />
 
     <EditText
-        android:id="@+id/editEmail"
+        android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -30,30 +46,53 @@
         android:inputType="textEmailAddress" />
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nama Depan" />
-
-    <EditText
-        android:id="@+id/editFirstName"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nama Depan"
-        android:inputType="textPersonName" />
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginBottom="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nama Belakang" />
+        <!-- Kolom Nama Depan -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
 
-    <EditText
-        android:id="@+id/editLastName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:hint="Nama Belakang"
-        android:inputType="textPersonName" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Depan" />
+
+            <EditText
+                android:id="@+id/editFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Depan"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Belakang" />
+
+            <EditText
+                android:id="@+id/editLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Belakang"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -67,16 +106,38 @@
         android:layout_marginBottom="16dp"
         android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/btnCancel"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Batal" />
+        android:text="Ketik ulang password" />
+
+    <EditText
+        android:id="@+id/editPasswordLagi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text" />
 
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Kirim" />
+        android:text="Kirim"
+        android:backgroundTint="#4CAF50"/>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Batal"
+        android:backgroundTint="#F44336" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"></LinearLayout>
 
 </LinearLayout>

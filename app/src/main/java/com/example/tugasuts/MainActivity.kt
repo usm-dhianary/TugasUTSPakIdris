@@ -5,12 +5,40 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.widget.EditText
+import android.widget.Button
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+        val username = findViewById<EditText>(R.id.editTextUsername)
+        val email = findViewById<EditText>(R.id.editTextEmail)
+        val firstname = findViewById<EditText>(R.id.editFirstName)
+        val lastname = findViewById<EditText>(R.id.editLastName)
+        val password = findViewById<EditText>(R.id.editPassword)
+        val passwordlagi = findViewById<EditText>(R.id.editPasswordLagi)
+
+        var buttonSubmit = findViewById<Button>(R.id.btnSubmit)
+        buttonSubmit.setOnClickListener {
+            var usernameText = username.text.toString()
+            var passwordText = password.text.toString()
+
+            if(usernameText.isBlank() || passwordText.isBlank()){
+                Toast.makeText(this,
+                    "Username & Password tidak boleh kosong",
+                    Toast.LENGTH_LONG
+                ).show()
+            }else{
+                Toast.makeText(this,
+                    "Login diproses..",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
