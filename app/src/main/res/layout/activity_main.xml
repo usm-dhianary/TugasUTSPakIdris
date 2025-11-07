@@ -30,7 +30,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="username"
-        android:inputType="text" />
+        android:inputType="text"
+        android:minHeight="48dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -43,7 +44,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:hint="email"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp" />
 
 
     <LinearLayout
@@ -70,7 +72,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nama Depan"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="0dp"
@@ -89,7 +92,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nama Belakang"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
         </LinearLayout>
 
     </LinearLayout>
@@ -104,7 +108,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:inputType="textPassword" />
+        android:hint="input password"
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
 
     <TextView
         android:id="@+id/textView2"
@@ -117,7 +123,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="text" />
+        android:hint="input password lagi"
+        android:inputType="text"
+        android:minHeight="48dp" />
 
     <Button
         android:id="@+id/btnSubmit"
