@@ -42,8 +42,9 @@ class MainActivity : AppCompatActivity() {
                 val fullName = "$firstnameText $lastnameText".trim()
                 val displayName = if (usernameText.isNotBlank()) usernameText else fullName
 
-                Toast.makeText(this,
-                    "Login diproses..",
+                Toast.makeText(
+                    this,
+                    "User $displayName berhasil didaftarkan",
                     Toast.LENGTH_LONG
                 ).show()
             }
